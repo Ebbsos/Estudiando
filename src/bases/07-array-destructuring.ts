@@ -1,15 +1,15 @@
-const characterNames= ['Goku','Pedro','Juan', 'Eve'];
+const characterNames = ['Goku', 'Pedro', 'Juan', 'Eve'];
 //const [,,p3] = characterNames;
 //console.log(p3);
-    //---tarea
-    function useState (FirstName:string){
+//---tarea
+const useState = (Value: string) => {
 
-        return [FirstName,(name:string)=>{
-            console.log(name);
-            
-        }] as const;
-    }
+    return [Value, (NexValue: string) => {
+        console.log(NexValue);
 
-    const [name, setName] = useState('Goku');
-    console.log(name);
-    setName('Vegata');
+    }] as const;
+}
+
+const [name, setName] = useState('Goku');
+console.log(name);
+setName('Vegata');
